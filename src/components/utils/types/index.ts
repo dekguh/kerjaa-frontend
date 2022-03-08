@@ -18,3 +18,10 @@ export interface IDividerBorder extends Pick<IButton, 'classes'> {
     color?: string;
     rounded?: string;
 }
+
+export interface IInitStateFilter {
+    jobs: string;
+    salaryMin: number;
+    salaryMax: number;
+    location: string;
+}
