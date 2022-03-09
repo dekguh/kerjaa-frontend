@@ -1,8 +1,9 @@
 import React from 'react'
+import HomeTemp from '../templates/HomeTemp'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <HomeTemp />
   )
 }
 
