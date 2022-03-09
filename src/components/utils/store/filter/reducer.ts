@@ -14,10 +14,13 @@ export const filterSlice = createSlice({
     reducers: {
         updateJobs : (state, action : PayloadAction<string>) => {
             state.jobs = action.payload
+        },
+        updateLocation: (state, action : PayloadAction<string>) => {
+            state.location = action.payload
         }
     }
 })
 
-export const { updateJobs } = filterSlice.actions
+export const { updateJobs, updateLocation } = filterSlice.actions
 
 export default filterSlice.reducer

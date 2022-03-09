@@ -3,11 +3,11 @@ import ListLocation from '../../atoms/controls/ListLocation'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { IFormSearch } from '../../../utils/types'
 
-const FormSearch : React.FC<IFormSearch> = ({ onChangeJob }) => {
+const FormSearch : React.FC<IFormSearch> = ({ onChangeJob, onChangeList }) => {
   return (
     <div className='max-w-815px w-full p-9 rounded-2xl shadow-light bg-white mx-auto'>
         <div>
-          <ListLocation />
+          <ListLocation onChangeList={onChangeList} />
         </div>
 
         <div className='mt-4'>

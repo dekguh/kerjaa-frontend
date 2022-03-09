@@ -1,11 +1,15 @@
-import React from 'react'
-import { IDividerBorder } from '../../../utils/types'
+import React, { ChangeEvent } from 'react'
+import { useDispatch } from 'react-redux'
+import { updateJobs, updateLocation } from '../../../utils/store/filter/reducer'
+import { AppDispatch } from '../../../utils/store/store'
 import DividerBorder from '../../atoms/other/DividerBorder'
 import TextHeading from '../../atoms/text/TextHeading'
 import FormSearch from '../../molecules/FormSearch'
 import Navigation from '../../molecules/Navigation'
 
-const HeadingSection : React.FC<IDividerBorder> = () => {
+const HeadingSection : React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>()
+
   return (
     <div className='bg-black-navy py-5 px-5'>
         <div className='max-w-1180px w-full mx-auto'>
@@ -29,7 +33,12 @@ const HeadingSection : React.FC<IDividerBorder> = () => {
               </div>
 
               <div className='-mb-32 pt-8'>
-                  <FormSearch />
+                  <FormSearch
+                    onChangeJob={(e : ChangeEvent<HTMLInputElement>) => dispatch(updateJobs(e.target.value))}
+                    onChangeList={(val) => {
+                      val && dispatch(updateLocation(val.value))
+                    }}
+                  />
               </div>
             </div>
         </div>
