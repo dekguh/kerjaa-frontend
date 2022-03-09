@@ -2,6 +2,7 @@ import React from 'react'
 import { IDividerBorder } from '../../../utils/types'
 import DividerBorder from '../../atoms/other/DividerBorder'
 import TextHeading from '../../atoms/text/TextHeading'
+import FormSearch from '../../molecules/FormSearch'
 import Navigation from '../../molecules/Navigation'
 
 const HeadingSection : React.FC<IDividerBorder> = () => {
@@ -25,6 +26,10 @@ const HeadingSection : React.FC<IDividerBorder> = () => {
                   color='bg-violet-bold'
                   classes='mx-auto'
                 />
+              </div>
+
+              <div className='-mb-32 pt-8'>
+                  <FormSearch />
               </div>
             </div>
         </div>

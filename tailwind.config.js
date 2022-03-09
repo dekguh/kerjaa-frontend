@@ -9,7 +9,8 @@ module.exports = {
         'black-doff': '#313640',
         'white-cream': '#D5DBE2',
         'violet-bold': '#997FE1',
-        'blue-light': '#F7FBFF'
+        'blue-light': '#F7FBFF',
+        'black-body': '#777777'
       },
       padding: {
         '9px': '9px'
@@ -24,10 +25,18 @@ module.exports = {
       },
       maxWidth: {
         '1180px': '1180px',
-        '485px': '485px'
+        '815px': '815px',
+        '485px': '485px',
+        '150px': '150px'
+      },
+      minWidth: {
+        '150px': '150px'
       },
       width: {
         '121px': '121px'
+      },
+      boxShadow: {
+        'light': '0 0 12px rgb(0 0 0 / 5%)'
       }
     },
   },

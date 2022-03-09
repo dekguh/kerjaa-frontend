@@ -1,5 +1,6 @@
-import { MouseEventHandler } from 'react'
+import { ChangeEventHandler, MouseEventHandler } from 'react'
 import { IconType } from 'react-icons'
+import { ActionMeta, SingleValue } from 'react-select';
 
 export interface IButton {
     classes?: string;
@@ -24,4 +25,18 @@ export interface IInitStateFilter {
     salaryMin: number;
     salaryMax: number;
     location: string;
+}
+
+export interface IListLocation {
+    onChangeList?: ((newValue: SingleValue<{
+            value: string;
+            label: string;
+        }>, actionMeta: ActionMeta<{
+            value: string;
+            label: string;
+        }>) => void) | undefined;
+}
+
+export interface IFormSearch extends Pick<IListLocation, 'onChangeList'> {
+    onChangeJob?: ChangeEventHandler;
 }
