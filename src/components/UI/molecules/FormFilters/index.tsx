@@ -43,7 +43,7 @@ const FormFilters = () => {
             </ul>
           </div>
 
-          {/* filter category */}
+          {/* filter category (bug checked hilang) */}
           <div className='flex-grow-0 flex-shrink relative pr-3'>
             <ButtonPrimary
               text='category'
@@ -64,6 +64,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='engineer'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('engineer') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Engineer</span>
                 </li>
@@ -74,6 +75,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='Accounting'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('Accounting') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Accounting</span>
                 </li>
@@ -84,6 +86,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='Analys'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('Analys') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Analys</span>
                 </li>
@@ -94,6 +97,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='Operational'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('Operational') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Operational</span>
                 </li>
@@ -104,6 +108,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='Design'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('Design') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Design</span>
                 </li>
@@ -114,6 +119,7 @@ const FormFilters = () => {
                     className='flex-grow-0 flex-shrink'
                     value='Editor'
                     onChange={handleCheckedBox}
+                    checked={stateFilters.category.indexOf('Editor') > -1 ? true : false}
                   />
                   <span className='inline-block pl-2'>Editor</span>
                 </li>
