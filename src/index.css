@@ -32,4 +32,16 @@
     .select__location .select__option:focus {
         @apply bg-violet-bold text-white;
     }
+
+    .salary-track-slider.salary-track-slider-0 {
+        @apply !bg-gray-300 h-1;
+    }
+
+    .salary-track-slider.salary-track-slider-1 {
+        @apply !bg-violet-bold h-1;
+    }
+
+    .salary-track-slider.salary-track-slider-2 {
+        @apply !bg-gray-300 h-1;
+    }
 }

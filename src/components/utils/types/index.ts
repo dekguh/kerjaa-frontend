@@ -7,6 +7,7 @@ export interface IButton {
     text?: string;
     onClick?: MouseEventHandler;
     Icon?: IconType;
+    iconPosition?: 'left' | 'right' | undefined;
 }
 
 export interface ITextHeading extends Pick<IButton, 'text' | 'classes'> {
@@ -39,4 +40,12 @@ export interface IListLocation {
 
 export interface IFormSearch extends Pick<IListLocation, 'onChangeList'> {
     onChangeJob?: ChangeEventHandler;
+}
+
+export interface ILabelCategory extends Pick<IButton, 'onClick'> {
+    label?: string;
+}
+
+export interface ISalarySlider {
+    onChange?: (value : number[], index : number) => void;
 }
