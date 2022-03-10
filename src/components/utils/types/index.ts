@@ -50,3 +50,13 @@ export interface ILabelCategory extends Pick<IButton, 'onClick'> {
 export interface ISalarySlider {
     onChange?: (value : number[], index : number) => void;
 }
+
+export interface ICardJob {
+    srcLogo?: string;
+    title?: string;
+    company?: string;
+    location?: string;
+    salary?: string;
+    skill: String[];
+    date?: string;
+}
