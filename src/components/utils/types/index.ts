@@ -26,6 +26,7 @@ export interface IInitStateFilter {
     salaryMin: number;
     salaryMax: number;
     location: string;
+    category: string[]
 }
 
 export interface IListLocation {

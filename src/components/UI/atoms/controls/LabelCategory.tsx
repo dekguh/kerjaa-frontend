@@ -9,10 +9,6 @@ const LabelCategory : React.FC<ILabelCategory> = ({ onClick, label }) => {
             <div className='flex-grow-0 flex-shrink leading-none pr-1'>
                 {label}
             </div>
-
-            <button className='flex-grow-0 flex-shrink p-0 m-0' onClick={onClick}>
-                <i><TiTimes /></i>
-            </button>
         </div>
     </div>
   )
