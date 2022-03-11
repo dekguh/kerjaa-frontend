@@ -3,11 +3,13 @@ import ListLocation from '../../atoms/controls/ListLocation'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { IFormSearch } from '../../../utils/types'
 
-const FormSearch : React.FC<IFormSearch> = ({ onChangeJob, onChangeList }) => {
+const FormSearch : React.FC<IFormSearch> = ({ onChangeJob, onChangeList, inputJobValue }) => {
   return (
     <div className='max-w-815px w-full p-9 rounded-2xl shadow-light bg-white mx-auto'>
         <div>
-          <ListLocation onChangeList={onChangeList} />
+          <form data-testid='formListLocation'>
+            <ListLocation onChangeList={onChangeList} />
+          </form>
         </div>
 
         <div className='mt-4'>
@@ -18,8 +20,9 @@ const FormSearch : React.FC<IFormSearch> = ({ onChangeJob, onChangeList }) => {
 
             <input
               type="text"
-              className='flex-grow flex-shrink border-0 outline-0 shadow-none pl-3 text-black-body' placeholder='ex: Frontend Egineer'
+              className='flex-grow flex-shrink border-0 outline-0 shadow-none pl-3 text-black-body' placeholder='ex: Frontend Engineer'
               onChange={onChangeJob}
+              value={inputJobValue}
             />
           </div>
         </div>

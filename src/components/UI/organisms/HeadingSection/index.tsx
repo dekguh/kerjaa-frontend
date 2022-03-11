@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateJobs, updateLocation } from '../../../utils/store/filter/reducer'
-import { AppDispatch } from '../../../utils/store/store'
+import { AppDispatch, RootState } from '../../../utils/store/store'
 import DividerBorder from '../../atoms/other/DividerBorder'
 import TextHeading from '../../atoms/text/TextHeading'
 import FormSearch from '../../molecules/FormSearch'
@@ -9,6 +9,7 @@ import Navigation from '../../molecules/Navigation'
 
 const HeadingSection : React.FC = () => {
   const dispatch = useDispatch<AppDispatch>()
+  const stateFilters = useSelector((state : RootState) => state.filters)
 
   return (
     <div className='bg-black-navy py-5 px-5'>
@@ -38,6 +39,7 @@ const HeadingSection : React.FC = () => {
                     onChangeList={(val) => {
                       val && dispatch(updateLocation(val.value))
                     }}
+                    inputJobValue={stateFilters.jobs}
                   />
               </div>
             </div>

@@ -41,6 +41,7 @@ export interface IListLocation {
 
 export interface IFormSearch extends Pick<IListLocation, 'onChangeList'> {
     onChangeJob?: ChangeEventHandler;
+    inputJobValue?: string;
 }
 
 export interface ILabelCategory extends Pick<IButton, 'onClick'> {

@@ -24,6 +24,8 @@ const ListLocation : React.FC<IListLocation> = ({ onChangeList }) => {
                 isSearchable={true}
                 options={options}
                 onChange={onChangeList}
+                name='location'
+                inputId='location'
             />
         </div>
     </div>
