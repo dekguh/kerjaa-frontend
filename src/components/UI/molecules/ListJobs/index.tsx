@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CardJob from '../../atoms/cards/CardJob'
+import ButtonPrimary from '../../atoms/controls/ButtonPrimary'
 
 const dataListJobs = [
     {
@@ -74,29 +75,37 @@ const dataListJobs = [
     }
 ]
 
-const ListJobs = () => {
-  return (
-    <div>
-        <ul>
-            <li>
-                <CardJob
-                    company='greeware'
-                    srcLogo='/logo/greeware.svg'
-                    title='Frontend Developer'
-                    location='Bali, Indonesia'
-                    salary='Rp.6m - Rp.10m'
-                    skill={[
-                        'react',
-                        'tailwind',
-                        'jest',
-                        'RTL',
-                        'storybook'
-                    ]}
+const ListJobs : React.FC = () => {
+    const [totalShow, setTotalShow] = useState<number>(2)
+
+    return (
+        <div className='px-5'>
+            <ul>
+                {(dataListJobs.length >= 1 && totalShow) && dataListJobs.slice(0, totalShow).map((data : any, i : number) => (
+                    <li key={i} className='mb-3'>
+                        <CardJob
+                            company={data.company}
+                            srcLogo={data.srcLogo}
+                            title={data.title}
+                            location={data.location}
+                            salary={data.salary}
+                            skill={data.skill}
+                        />
+                    </li>
+                ))}
+            </ul>
+
+            <div className='pt-3'>
+                <ButtonPrimary
+                    text='see more'
+                    classes='mx-auto'
+                    onClick={() => {
+                        setTotalShow(totalShow + 2)
+                    }}
                 />
-            </li>
-        </ul>
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
 
 export default ListJobs

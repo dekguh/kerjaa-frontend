@@ -15,7 +15,7 @@ const CardJob : React.FC<ICardJob> = ({ srcLogo, company, title, location, salar
             </div>
 
             {/* title, salary, location */}
-            <div className='flex-grow-0 md:flex-grow-0 flex-shrink pr-4'>
+            <div className='flex-grow-0 md:flex-grow flex-shrink pr-4'>
                 <span className='text-sm text-black-body'>{company}</span>
                 <h3 className='text-base text-black-navy font-bold'>{title}</h3>
                 <div className='mt-1'>
@@ -30,7 +30,7 @@ const CardJob : React.FC<ICardJob> = ({ srcLogo, company, title, location, salar
             </div>
 
             {/* skill */}
-            <div className='my-3 md:my-0 w-full md:w-auto flex-grow flex-shrink pr-4'>
+            <div className='my-3 md:my-0 w-full md:w-auto flex-grow flex-shrink pr-4 max-w-xs'>
                 <ul className='flex flex-row flex-wrap'>
                     {skill.length >= 1 && skill.map((data : any, i : number) => (
                         <li key={i} className='border border-black-navy p-1 px-2 rounded-full text-black-navy text-xs mr-2 my-1'>
