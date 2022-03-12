@@ -43,7 +43,7 @@ const FormFilters = () => {
             </ul>
           </div>
 
-          {/* filter category (bug checked hilang) */}
+          {/* filter category */}
           <div className='flex-grow-0 flex-shrink relative pr-3'>
             <ButtonPrimary
               text='category'
@@ -65,6 +65,7 @@ const FormFilters = () => {
                     value='engineer'
                     onChange={handleCheckedBox}
                     checked={stateFilters.category.indexOf('engineer') > -1 ? true : false}
+                    data-testid='category-checkbox-1'
                   />
                   <span className='inline-block pl-2'>Engineer</span>
                 </li>
@@ -76,6 +77,7 @@ const FormFilters = () => {
                     value='Accounting'
                     onChange={handleCheckedBox}
                     checked={stateFilters.category.indexOf('Accounting') > -1 ? true : false}
+                    data-testid='category-checkbox-2'
                   />
                   <span className='inline-block pl-2'>Accounting</span>
                 </li>
